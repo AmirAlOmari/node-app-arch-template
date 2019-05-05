@@ -3,6 +3,7 @@ import { json } from "body-parser";
 
 import { AppBase, ExpressLike } from "./../utils/core";
 import { CORS } from "./middleware/cors.middleware";
+import { Auth } from "./middleware/auth.middleware";
 import { UsersRouter } from "./Users/Users.router";
 
 export class App extends AppBase {
@@ -18,6 +19,7 @@ export class App extends AppBase {
 		 * Primary middleware appending
 		 */
 		this.nativeApp.use(CORS(true));
+		this.nativeApp.use(Auth());
 
 		/**
 		 * Routes appending
