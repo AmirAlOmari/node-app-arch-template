@@ -72,7 +72,7 @@ export interface ArrayValidatorFunction<T> {
 	(arg: ArrayValueFunctionArg<T>): boolean;
 }
 
-export interface ArrayFieldRuleRangeLength extends StringFieldRuleRangeLength {}
+export type ArrayFieldRuleRangeLength = StringFieldRuleRangeLength;
 
 export interface ArrayFieldRule extends OptionalFieldRule {
 	$type: ArrayPrimitiveType;
