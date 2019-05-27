@@ -8,7 +8,8 @@
 		"start": "node --inspect=0.0.0.0:9222 ./dist/index.js",
 		"start:dev": "node --inspect-brk=0.0.0.0:9222 -r ts-node/register ./src/index.ts",
 		"build": "tsc -p .",
-		"test": "node --inspect-brk=0.0.0.0:9229 ./node_modules/mocha/bin/_mocha -r ts-node/register --timeout 999999 --colors tests/index.ts"
+		"test": "node --inspect-brk=0.0.0.0:9229 ./node_modules/mocha/bin/_mocha -r ts-node/register --timeout 999999 --colors tests/index.ts",
+		"prettier": "prettier --write \"./**/*.{js,ts,json}\" \"!./dist/**\""
 	},
 	"keywords": [],
 	"author": "Amir Al-Omari",
@@ -30,6 +31,7 @@
 		"chai": "^4.2.0",
 		"chai-http": "^4.3.0",
 		"mocha": "^6.1.4",
+		"prettier": "1.17.1",
 		"ts-node": "^8.1.0"
 	}
 }
