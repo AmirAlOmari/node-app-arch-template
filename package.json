@@ -8,6 +8,7 @@
 		"start": "node --inspect=0.0.0.0:9222 ./dist/index.js",
 		"start:dev": "node --inspect-brk=0.0.0.0:9222 -r ts-node/register ./src/index.ts",
 		"build": "tsc -p .",
+		"docker": "node ./bin/docker.js",
 		"test": "node --inspect-brk=0.0.0.0:9229 ./node_modules/mocha/bin/_mocha -r ts-node/register --timeout 999999 --colors tests/index.ts",
 		"prettier": "prettier --write \"./**/*.{js,ts,json}\" \"!./dist/**\"",
 		"tslint": "tslint --fix --force -p .",
@@ -18,10 +19,10 @@
 	"license": "UNLICENSED",
 	"dependencies": {
 		"body-parser": "^1.19.0",
-		"express": "^4.17.0",
+		"express": "^4.17.1",
 		"jsonwebtoken": "^8.5.1",
-		"mongoose": "^5.5.11",
-		"typescript": "^3.4.5"
+		"mongoose": "^5.5.13",
+		"typescript": "^3.5.1"
 	},
 	"devDependencies": {
 		"@types/chai": "^4.1.7",
