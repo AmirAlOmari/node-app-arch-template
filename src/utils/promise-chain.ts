@@ -2,7 +2,7 @@ export type IAnyFunction = (...args: Array<any>) => any;
 
 const defaultErrField = "__err_field__";
 
-export class PromiseChain<T> {
+export class PromiseChain<T extends object> {
 	constructor(public customEnum: T, public errField: string = defaultErrField) {}
 
 	public catch<Y extends keyof T>(errIdentify: Y) {
