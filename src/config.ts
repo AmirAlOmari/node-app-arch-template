@@ -2,7 +2,7 @@ export default {
 	/**
 	 * Mongod instance url to connect
 	 */
-	MONGODB_URL: "mongodb://127.0.0.1:27017/main",
+	MONGODB_URL: "mongodb://mongo:27017/main",
 
 	/**
 	 * Hostname to bind on
